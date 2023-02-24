@@ -6,10 +6,10 @@ def giaiThua(n):
     else:
         return (n * giaiThua(n - 1))
 
-def topSlove(mu):
+def solveTop(mu):
     return 1/2 * (1/2 - mu + 1)
 
-def sloveSecond(first, top, x, mu):
+def solveSecond(first, top, x, mu):
     return first + (top / giaiThua(mu)) * x**mu
 
 print("Nhập x:")
@@ -19,14 +19,14 @@ k = int(input())
 
 mu = 2
 first = 1 + 1/2 * x
-top = topSlove(mu)
-second = sloveSecond(first, top, x, mu)
+top = solveTop(mu)
+second = solveSecond(first, top, x, mu)
 
 while math.fabs(first - second) > 10**(-k):
     mu = mu + 1
     first = second
-    top = top * topSlove(mu)
-    second = sloveSecond(first, top, x, mu)
+    top = top * solveTop(mu)
+    second = solveSecond(first, top, x, mu)
     
 first = 1 / first    
     
