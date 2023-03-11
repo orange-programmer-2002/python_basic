@@ -1,7 +1,11 @@
 {
     "cSpell.words": [
         "Bich",
+        "iterrows",
         "Luong",
-        "Phan"
+        "nrows",
+        "Phan",
+        "skiprows",
+        "usecols"
     ]
 }
